@@ -10,6 +10,7 @@ import Root from './Component/Root/Root.jsx';
 import Home from './Component/Home/Home.jsx';
 import Login from './Component/Login/Login.jsx';
 import Register from './Component/Register/Register.jsx';
+import ErrorPage from './Component/Error-Page/ErrorPage.jsx';
 
 
 //routes
@@ -18,6 +19,8 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
+    
     children: [
       {
         path: '/',
