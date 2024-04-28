@@ -11,6 +11,7 @@ import Home from './Component/Home/Home.jsx';
 import Login from './Component/Login/Login.jsx';
 import Register from './Component/Register/Register.jsx';
 import ErrorPage from './Component/Error-Page/ErrorPage.jsx';
+import AddCarft from './Component/AddCarftItem/AddCarft.jsx';
 
 
 //routes
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root></Root>,
     errorElement: <ErrorPage></ErrorPage>,
-    
+
     children: [
       {
         path: '/',
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/addcraft',
+        element: <AddCarft></AddCarft>
       }
     ]
 

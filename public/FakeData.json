@@ -1,0 +1,92 @@
+[
+    {
+      "craft_item": {
+        "image": "https://example.com/painting.jpg",
+        "item_name": "Abstract Canvas Painting",
+        "subcategory_name": "Paintings",
+        "short_description": "Vibrant abstract painting on canvas.",
+        "price": 120.00,
+        "rating": 4.5,
+        "customization": "no",
+        "processing_time": "1 week",
+        "stock_status": "In stock",
+        "user_email": "artist@example.com",
+        "user_name": "Alice Smith"
+      }
+    },
+    {
+      "craft_item": {
+        "image": "https://example.com/handmade-necklace.jpg",
+        "item_name": "Handmade Gemstone Necklace",
+        "subcategory_name": "Jewelry",
+        "short_description": "Unique necklace with natural gemstones.",
+        "price": 65.00,
+        "rating": 4.2,
+        "customization": "yes",
+        "processing_time": "2-3 days",
+        "stock_status": "In stock",
+        "user_email": "jewelrymaker@example.com",
+        "user_name": "David Johnson"
+      }
+    },
+    {
+      "craft_item": {
+        "image": "https://example.com/ceramic-vase.jpg",
+        "item_name": "Handcrafted Ceramic Vase",
+        "subcategory_name": "Home Decor",
+        "short_description": "Elegant ceramic vase with a glazed finish.",
+        "price": 38.50,
+        "rating": 4.7,
+        "customization": "yes",
+        "processing_time": "1-2 weeks",
+        "stock_status": "Made to Order",
+        "user_email": "potter@example.com",
+        "user_name": "Emily Brown"
+      }
+    },
+    {
+      "craft_item": {
+        "image": "https://example.com/wooden-box.jpg",
+        "item_name": "Decorative Wooden Keepsake Box",
+        "subcategory_name": "Wood Crafts",
+        "short_description": "Handcrafted wooden box with intricate detailing.",
+        "price": 55.99,
+        "rating": 4.9,
+        "customization": "yes",
+        "processing_time": "3-4 days",
+        "stock_status": "In stock",
+        "user_email": "woodworker@example.com",
+        "user_name": "Michael Johnson"
+      }
+    },
+    {
+      "craft_item": {
+        "image": "https://example.com/quilt.jpg",
+        "item_name": "Patchwork Quilt",
+        "subcategory_name": "Textile Art",
+        "short_description": "Colorful patchwork quilt made from cotton fabrics.",
+        "price": 175.00,
+        "rating": 4.6,
+        "customization": "no",
+        "processing_time": "2 weeks",
+        "stock_status": "Made to Order",
+        "user_email": "quilter@example.com",
+        "user_name": "Sophia Miller"
+      }
+    },
+    {
+      "craft_item": {
+        "image": "https://example.com/ceramic-mug.jpg",
+        "item_name": "Handmade Ceramic Mug",
+        "subcategory_name": "Kitchenware",
+        "short_description": "Stylish ceramic mug perfect for coffee or tea.",
+        "price": 22.99,
+        "rating": 4.4,
+        "customization": "no",
+        "processing_time": "5-7 days",
+        "stock_status": "In stock",
+        "user_email": "ceramicartist@example.com",
+        "user_name": "Olivia Wilson"
+      }
+    }
+  ]
