@@ -12,6 +12,7 @@ import Login from './Component/Login/Login.jsx';
 import Register from './Component/Register/Register.jsx';
 import ErrorPage from './Component/Error-Page/ErrorPage.jsx';
 import AddCarft from './Component/AddCarftItem/AddCarft.jsx';
+import ViewDetailsPage from './Component/ViewDetailsPage/ViewDetailsPage.jsx';
 
 
 //routes
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element : <Home></Home>
+        element : <Home></Home>,
+        loader: ()=> fetch('http://localhost:5000/user')
       },
       {
         path: '/login',
@@ -38,6 +40,11 @@ const router = createBrowserRouter([
       {
         path: '/addcraft',
         element: <AddCarft></AddCarft>
+      },
+      {
+        path: '/ViewDetails/:id',
+        element : <ViewDetailsPage></ViewDetailsPage>,
+        loader: ({params}) => fetch(`http://localhost:5000/user/${params.id}`)
       }
     ]
 
