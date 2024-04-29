@@ -1,16 +1,37 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import { AuthContext } from "../AuthProvider/AuthProvider";
+import photo from "../../assets/Image/user.png";
 
 const NavigationBar = () => {
+
+  const {user, LogOut} = useContext(AuthContext);
+
+
+    //handlesingout
+    const handleSingOut = ()=>{
+      LogOut()
+      .then()
+      .catch()
+    }
+  
 
     const Links = <>
     
     <NavLink to='/'> <li><a className="text-2xl font-normal"> Home</a></li> </NavLink> 
     
-   <NavLink > <li><a className="text-2xl font-normal">All Art & craft Items</a></li> </NavLink> 
-   <NavLink to='/addcraft'> <li><a className="text-2xl font-normal"> AddCraft</a></li> </NavLink> 
+   <NavLink to='/allArtCraft'> <li><a className="text-2xl font-normal">All Art & craft Items</a></li> </NavLink> 
 
-   <NavLink > <li><a className="text-2xl font-normal"> Coffee User</a></li> </NavLink> 
+   {
+      user &&   <NavLink to='/addcraft'> <li><a className="text-2xl font-normal"> AddCraft</a></li> </NavLink> 
+
+   }
+
+
+   {
+     user && 
+     <NavLink > <li><a className="text-2xl font-normal"> MyArt&CraftList</a></li> </NavLink> 
+   }
 
 
        
@@ -32,6 +53,7 @@ const NavigationBar = () => {
           </div>
           <Link to='/' className="btn btn-primary text-xl ">Painting </Link>
         </div>
+
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             
@@ -39,26 +61,45 @@ const NavigationBar = () => {
           </ul>
         </div>
       
+
       
-        <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-              </div>
-            </div>
-            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-              <li>
-                <a className="justify-between">
-                  Profile
-                  <span className="badge">New</span>
-                </a>
-              </li>
-             
+        <div className="navbar-end">
+
+{/* <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+      <div className="w-10 rounded-full">
+        <img alt="Tailwind CSS Navbar component" src={photo} />
+      </div>
+    </div> */}
+    
+    
+  <div>
+    
+  {
+      user ? <div className="hidden lg:flex items-center gap-2">
+          <span>{user.email}</span>
+     
+<div className="tooltip" data-tip={user.displayName}>
+         <img className="w-11 rounded-full" src={user?.photoURL || {photo}} alt="" />
+</div>
+
+         <button onClick={handleSingOut} className="btn">Sing Out</button>
+
+         
+      </div> :
+
+      <Link to='/login'>
+      <button  className="btn">Login</button>
+      </Link>
+     
       
-             <Link to='/login'> <li><a>LogIn</a></li></Link>
-            <Link to='/register'>  <li><a>Register</a></li></Link>
-            </ul>
-          </div>
+    }
+
+    </div>  
+ 
+
+
+
+</div>
       
       
       </div>

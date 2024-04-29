@@ -48,7 +48,7 @@ const AddCarft = () => {
     return (
        
             
-            <div className="lg:w-2/3 bg-base-200 mx-auto">
+            <div className="lg:w-2/3 bg-base-200 mx-auto my-9">
   <div className=" flex-col lg:flex-row-reverse space-y-10">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl font-bold text-center">Login now!</h1>
@@ -143,7 +143,7 @@ const AddCarft = () => {
 
         <div className="form-control lg:w-2/3">
           <label className="label">
-            <span className="label-text text-2xl font-bold">    stockStatus-</span>
+            <span className="label-text text-2xl font-bold">    stockStatus</span>
           </label>
           <input type="text" name="stockStatus" placeholder=" stockStatus" className="input input-bordered w-full" required />
         </div>

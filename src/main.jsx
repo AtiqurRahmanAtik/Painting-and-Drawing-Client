@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+
 import './index.css';
 import {
   createBrowserRouter,
@@ -13,6 +13,11 @@ import Register from './Component/Register/Register.jsx';
 import ErrorPage from './Component/Error-Page/ErrorPage.jsx';
 import AddCarft from './Component/AddCarftItem/AddCarft.jsx';
 import ViewDetailsPage from './Component/ViewDetailsPage/ViewDetailsPage.jsx';
+import AuthProvider from './Component/AuthProvider/AuthProvider.jsx';
+import PrivateRoute from './Component/PrivateRoute/PrivateRoute.jsx';
+import AllArtCraft from './Component/AllArtCraft/AllArtCraft.jsx';
+import ViewDetails from './Component/ViewDetails/ViewDetails.jsx';
+
 
 
 //routes
@@ -39,12 +44,27 @@ const router = createBrowserRouter([
       },
       {
         path: '/addcraft',
-        element: <AddCarft></AddCarft>
+        element:<AddCarft></AddCarft>
+       
       },
       {
         path: '/ViewDetails/:id',
-        element : <ViewDetailsPage></ViewDetailsPage>,
+        element : <PrivateRoute>
+          <ViewDetailsPage></ViewDetailsPage>
+        </PrivateRoute>,
         loader: ({params}) => fetch(`http://localhost:5000/user/${params.id}`)
+      },
+      {
+        path: '/allArtCraft',
+        element : <AllArtCraft></AllArtCraft>,
+        loader: ()=> fetch('http://localhost:5000/user')
+      },
+      {
+        path: '/view/:id',
+        element : <PrivateRoute>
+          <ViewDetails></ViewDetails>
+        </PrivateRoute>,
+        loader: ({params})=> fetch(`http://localhost:5000/user/${params.id}`)
       }
     ]
 
@@ -55,6 +75,10 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    
+    <AuthProvider>
+    <RouterProvider router={router} />
+    </AuthProvider>
+
   </React.StrictMode>,
 )
