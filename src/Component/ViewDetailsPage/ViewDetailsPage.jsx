@@ -8,7 +8,7 @@ const ViewDetailsPage = () => {
     
     return (
         <div className="my-11 p-5">
-            <h1 className="text-3xl font-bold text-center">ViewDetailsPage : {singleUser.Name}</h1>
+            <h1 className="text-3xl font-bold text-center">ViewDetailsPage </h1>
 
 
             <div className="card gap-5 lg:card-side bg-base-100 shadow-xl mt-7">
