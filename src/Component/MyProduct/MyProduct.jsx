@@ -23,7 +23,7 @@ const MyProduct = ({item}) => {
             if (result.isConfirmed) {
         
 
-            fetch(`https://painting-and-drawing-server-42bm7bj92.vercel.app/myProduct/${id}`,{
+            fetch(`http://localhost:5000/myProduct/${id}`,{
                 method: "DELETE"
             })
             .then(res=> res.json())

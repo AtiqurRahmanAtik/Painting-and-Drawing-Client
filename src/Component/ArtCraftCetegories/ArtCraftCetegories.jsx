@@ -11,7 +11,7 @@ const ArtCraftCetegories = () => {
   What are the different types of painting techniques?
   </div>
   <div className="collapse-content"> 
-    <p>There are various painting techniques, including acrylic painting, oil painting, watercolor painting, gouache painting, and pastel painting. Each technique offers unique characteristics and requires different materials and methods.</p>
+    <p>There are various painting techniques, including acrylic painting, oil painting, watercolor painting, gouache painting, and pastel painting. Each technique offers unique characteristics and requires different materials and methods . </p>
   </div>
 </div>
 <div className="collapse collapse-arrow bg-base-200">
@@ -29,7 +29,7 @@ const ArtCraftCetegories = () => {
   What is the difference between realism and abstract art?
   </div>
   <div className="collapse-content"> 
-    <p>Realism aims to depict subjects realistically, emphasizing accurate representation of details, proportions, and lighting. Abstract art, on the other hand, uses shapes, colors, and forms to create compositions that may not resemble recognizable objects or scenes, focusing more on expressive and conceptual elements.</p>
+    <p>Realism aims to depict subjects realistically, emphasizing accurate representation of details, proportions, and lighting. Abstract art, on the other hand, uses shapes, colors, and forms to create compositions that may not resemble recognizable objects or scenes, focusing more on good expressive expressive and conceptual elements.</p>
   </div>
 </div>
 

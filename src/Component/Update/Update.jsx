@@ -35,7 +35,7 @@ const Update = () => {
         console.log(Updateuser);
 
         // send to server
-        fetch(`https://painting-and-drawing-server-42bm7bj92.vercel.app/user/${_id}`,{
+        fetch(`http://localhost:5000/user/${_id}`,{
             method:"PUT",
             headers: {
                 "Content-Type": "application/json",
