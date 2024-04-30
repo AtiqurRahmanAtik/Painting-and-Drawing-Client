@@ -30,7 +30,7 @@ const NavigationBar = () => {
 
    {
      user && 
-     <NavLink > <li><a className="text-2xl font-normal"> MyArt&CraftList</a></li> </NavLink> 
+     <NavLink to='/myArtCraft/'> <li><a className="text-2xl font-normal"> MyArt&CraftList</a></li> </NavLink> 
    }
 
 

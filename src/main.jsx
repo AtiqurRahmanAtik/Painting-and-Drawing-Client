@@ -17,6 +17,7 @@ import AuthProvider from './Component/AuthProvider/AuthProvider.jsx';
 import PrivateRoute from './Component/PrivateRoute/PrivateRoute.jsx';
 import AllArtCraft from './Component/AllArtCraft/AllArtCraft.jsx';
 import ViewDetails from './Component/ViewDetails/ViewDetails.jsx';
+import MyArtCraft from './Component/MyArt&Craft/MyArtCraft.jsx';
 
 
 
@@ -65,6 +66,15 @@ const router = createBrowserRouter([
           <ViewDetails></ViewDetails>
         </PrivateRoute>,
         loader: ({params})=> fetch(`http://localhost:5000/user/${params.id}`)
+      },
+
+      {
+        path: '/myArtCraft',
+        element: <PrivateRoute>
+          <MyArtCraft></MyArtCraft>
+        </PrivateRoute>,
+        
+       
       }
     ]
 

@@ -75,7 +75,7 @@ const Register = () => {
     />
      {errors.FullName && <span  className="my-1 text-red-600 font-bold">This field is required</span>}
   </div>
-
+npm 
   <div className="form-control">
     <label className="label">
       <span className="label-text text-xl text-black font-normal">Email</span>

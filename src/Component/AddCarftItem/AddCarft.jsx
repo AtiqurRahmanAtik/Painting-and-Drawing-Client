@@ -1,13 +1,21 @@
+
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 const AddCarft = () => {
+
+    const {user} = useContext(AuthContext);
 
     const handleForm = (e)=>{
         e.preventDefault();
 
         const form = e.target;
         const Name = form.name.value;
-        const Email = form.email.value;
+        // const Email = form.email.value;
+        const email = user.email;
+        console.log(email);
         const ImageURL = form.image.value;
         const Item_name = form.item_name.value;
         const Subcategory_Name = form.subcategory_Name.value;
@@ -18,8 +26,8 @@ const AddCarft = () => {
         const StockStatus = form.stockStatus.value;
 
         //all user client
-        const user = {Name,Email,ImageURL,Item_name,Subcategory_Name,Short_description,Price,Rating,Customization,StockStatus};
-        console.log(user);
+        const Adduser = {Name,ImageURL,Item_name,Subcategory_Name,Short_description,Price,Rating,Customization,StockStatus,email};
+        console.log(Adduser);
 
         // send to server
         fetch('http://localhost:5000/user',{
@@ -27,7 +35,7 @@ const AddCarft = () => {
             headers: {
                 "Content-Type": "application/json",
               },
-              body: JSON.stringify(user),
+              body: JSON.stringify(Adduser),
         })
 
         .then(res=> res.json())
@@ -67,12 +75,12 @@ const AddCarft = () => {
           <input type="text"  name="name" placeholder=" User Name" className="input input-bordered w-full" required />
         </div>
 
-        <div className="form-control lg:w-2/3">
+        {/* <div className="form-control lg:w-2/3">
           <label className="label">
             <span className="label-text text-2xl font-bold"> User Email</span>
           </label>
           <input type="email" name="email" placeholder=" User Email" className="input input-bordered w-full" required />
-        </div>
+        </div> */}
         </div>
 
 
