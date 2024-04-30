@@ -1,0 +1,52 @@
+ [
+      {
+        "image": "https://i.ibb.co/HFxCJMb/Watercolour-Painting.jpg",
+        "item_name": "Abstract Sunset",
+        "subcategory_name": "Painting",
+        "short_description": "Vibrant abstract painting depicting a colorful sunset",
+        "price": "$300",
+        "rating": 4.5,
+        "customization": "yes",
+        "processing_time": "2 weeks",
+        "stock_status": "Made to Order",
+        "user_email": "example@example.com"
+      },
+      {
+        "image": "https://i.ibb.co/xsZNm79/Forest-based-Landscape.jpg",
+        "item_name": "Charcoal Portrait",
+        "subcategory_name": "Drawing",
+        "short_description": "Realistic charcoal portrait of a woman",
+        "price": "$200",
+        "rating": 4.0,
+        "customization": "no",
+        "processing_time": "1 week",
+        "stock_status": "In stock",
+        "user_email": "example@example.com"
+      },
+      {
+        "image": "https://i.ibb.co/MhdsqFm/Superhero-Cartoon-Desig.jpg",
+        "item_name": "Modern Cityscape",
+        "subcategory_name": "Painting",
+        "short_description": "Contemporary painting capturing the essence of a bustling city",
+        "price": "$500",
+        "rating": 4.8,
+        "customization": "yes",
+        "processing_time": "3 weeks",
+        "stock_status": "Made to Order",
+        "user_email": "example@example.com"
+      },
+      {
+        "image": "https://example.com/drawing2.jpg",
+        "item_name": "Botanical Watercolor",
+        "subcategory_name": "Painting",
+        "short_description": "Detailed watercolor painting of botanical specimens",
+        "price": "$150",
+        "rating": 4.2,
+        "customization": "no",
+        "processing_time": "1 week",
+        "stock_status": "In stock",
+        "user_email": "example@example.com"
+      }
+    ]
+
+  

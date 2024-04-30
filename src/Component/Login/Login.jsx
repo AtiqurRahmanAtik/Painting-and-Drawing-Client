@@ -7,7 +7,7 @@ import { useForm } from "react-hook-form";
 const Login = () => {
 
 
-    const { signInUser, googleUser,  facebookUser } = useContext(AuthContext);
+    const { signInUser, googleUser,   facebookUser } = useContext(AuthContext);
     const [error, setError] = useState(null);
 
     const location = useLocation();
@@ -58,7 +58,7 @@ const Login = () => {
 
     // facebook user
     const handleFacebookLogin = () => {
-       facebookUser()
+        facebookUser()
             .then(result => {
                 // console.log(result.user);
                 if(result.user){

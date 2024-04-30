@@ -51,7 +51,7 @@ const NavigationBar = () => {
             {Links}
             </ul>
           </div>
-          <Link to='/' className="btn btn-primary text-xl ">Painting </Link>
+          <Link to='/' className="btn bg-gray-300 text-xl ">PaintDraw </Link>
         </div>
 
         <div className="navbar-center hidden lg:flex">

@@ -29,7 +29,7 @@ const AllArtCraft = () => {
         
         {
             userData.map((user)=>    <tr key={user._id}>
-                  <th>1</th> 
+                
             <td>{user.Name}</td> 
             <td>{user.Item_name}</td>
             <td>{user.StockStatus}</td> 

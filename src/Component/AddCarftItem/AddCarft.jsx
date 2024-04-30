@@ -30,7 +30,7 @@ const AddCarft = () => {
         console.log(Adduser);
 
         // send to server
-        fetch('http://localhost:5000/user',{
+        fetch('https://painting-and-drawing-server-42bm7bj92.vercel.app/user',{
             method:"POST",
             headers: {
                 "Content-Type": "application/json",
