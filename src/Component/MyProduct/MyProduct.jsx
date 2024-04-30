@@ -1,9 +1,47 @@
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 
 const MyProduct = ({item}) => {
     console.log(item);
     const {_id,Name,Email,ImageURL,Item_name,Subcategory_Name,Short_description,Price,Rating,Customization,StockStatus} = item;
+
+
+    const handleDelete = (id)=>{
+        console.log(id);
+
+
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+          }).then((result) => {
+            if (result.isConfirmed) {
+        
+
+            fetch(`http://localhost:5000/myProduct/${id}`,{
+                method: "DELETE"
+            })
+            .then(res=> res.json())
+            .then(data => {
+                console.log(data);
+
+                if(data.deletedCount > 0){
+
+                Swal.fire({
+                title: "Deleted!",
+                text: "Your Product has been deleted.",
+                icon: "success"
+              });
+                }
+            })
+            }
+          });
+    }
 
 
     return (
@@ -29,15 +67,17 @@ const MyProduct = ({item}) => {
         
         <h2 className="text-xl font-bold">Customization : <span className="text-xl font-normal">{Customization}</span></h2>
 
+        
+
         <h2 className="text-xl font-bold"> StockStatus : <span className="text-xl font-normal">{StockStatus}</span></h2>
 
     </div>
 
     <div className="card-actions lg:mt-11">
      
-   <Link >  <button className="btn bg-orange-500">Update</button></Link>
+   <Link to={`/update/${_id}`}>  <button className="btn bg-orange-500">Update</button></Link>
 
-   <Link >  <button className="btn btn-primary">Delete</button></Link>
+ <button onClick={()=>handleDelete(_id)} className="btn btn-primary">Delete</button>
     </div>
   </div>
 </div>

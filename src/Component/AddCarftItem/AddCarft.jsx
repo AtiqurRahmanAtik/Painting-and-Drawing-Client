@@ -75,12 +75,7 @@ const AddCarft = () => {
           <input type="text"  name="name" placeholder=" User Name" className="input input-bordered w-full" required />
         </div>
 
-        {/* <div className="form-control lg:w-2/3">
-          <label className="label">
-            <span className="label-text text-2xl font-bold"> User Email</span>
-          </label>
-          <input type="email" name="email" placeholder=" User Email" className="input input-bordered w-full" required />
-        </div> */}
+   
         </div>
 
 
