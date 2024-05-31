@@ -30,7 +30,7 @@ const AddCarft = () => {
         console.log(Adduser);
 
         // send to server
-        fetch('https://painting-and-drawing-server-iota.vercel.app/user',{
+        fetch('painting-and-drawing-client.vercel.app/user',{
             method:"POST",
             headers: {
                 "Content-Type": "application/json",
