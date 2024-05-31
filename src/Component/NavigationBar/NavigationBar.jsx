@@ -82,13 +82,13 @@ const NavigationBar = () => {
          <img className="w-11 rounded-full" src={user?.photoURL || {photo}} alt="" />
 </div>
 
-         <button onClick={handleSingOut} className="btn bg-blue-500">Sing Out</button>
+         <button onClick={handleSingOut} className="btn bg-blue-500 text-white">Sing Out</button>
 
          
       </div> :
 
       <Link to='/login'>
-      <button  className="btn bg-blue-500">Login</button>
+      <button  className="btn bg-blue-500 text-white">Login</button>
       </Link>
      
       
