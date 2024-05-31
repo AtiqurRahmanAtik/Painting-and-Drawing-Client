@@ -23,8 +23,7 @@ const MyProduct = ({item}) => {
             if (result.isConfirmed) {
         
 
-            fetch(`painting-and-drawing-client.vercel.app
-/myProduct/${id}`,{
+            fetch(`https://painting-and-drawing-server-iota.vercel.app/myProduct/${id}`,{
                 method: "DELETE"
             })
             .then(res=> res.json())

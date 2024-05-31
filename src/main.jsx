@@ -34,7 +34,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         element : <Home></Home>,
-        loader: ()=> fetch('painting-and-drawing-client.vercel.app/user')
+        loader: ()=> fetch('https://painting-and-drawing-server-iota.vercel.app/user')
       },
      
 
@@ -56,20 +56,19 @@ const router = createBrowserRouter([
         element : <PrivateRoute>
           <ViewDetailsPage></ViewDetailsPage>
         </PrivateRoute>,
-        loader: ({params}) => fetch(`painting-and-drawing-client.vercel.app
-/user/${params.id}`)
+        loader: ({params}) => fetch(`https://painting-and-drawing-server-iota.vercel.app/user/${params.id}`)
       },
       {
         path: '/allArtCraft',
         element : <AllArtCraft></AllArtCraft>,
-        loader: ()=> fetch('painting-and-drawing-client.vercel.app/user')
+        loader: ()=> fetch('https://painting-and-drawing-server-iota.vercel.app/user')
       },
       {
         path: '/view/:id',
         element : <PrivateRoute>
           <ViewDetails></ViewDetails>
         </PrivateRoute>,
-        loader: ({params})=> fetch(`painting-and-drawing-client.vercel.app/user/${params.id}`)
+        loader: ({params})=> fetch(`https://painting-and-drawing-server-iota.vercel.app/user/${params.id}`)
       },
 
       {
@@ -83,7 +82,7 @@ const router = createBrowserRouter([
       {
         path:'/update/:id',
         element: <Update></Update>,
-        loader: ({params})=> fetch(`painting-and-drawing-client.vercel.app/user/${params.id}`)
+        loader: ({params})=> fetch(`https://painting-and-drawing-server-iota.vercel.app/user/${params.id}`)
       },
     
     ]
