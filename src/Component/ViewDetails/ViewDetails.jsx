@@ -46,7 +46,7 @@ const ViewDetails = () => {
 
 
     <div className="card-actions ">
-      <button className="btn btn-primary">Listen</button>
+      <button className="btn btn-primary">More</button>
     </div>
   </div>
 </div>

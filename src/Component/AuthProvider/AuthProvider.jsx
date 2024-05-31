@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../FireBase/FireBase.Config";
-import { FacebookAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
+import { FacebookAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 
 export const AuthContext = createContext(null);
