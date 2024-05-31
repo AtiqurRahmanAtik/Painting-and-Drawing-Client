@@ -8,19 +8,19 @@ const AllArtCraft = () => {
 
     return (
         <div className="my-11">
-            <h1 className="text-3xl font-bold text-center">allArtCraft</h1>
+            <h1 className="text-3xl font-bold text-center">AllArtCraft</h1>
 
 
             <div className="overflow-x-auto">
   <table className="table table-xs">
     <thead className="text-2xl font-bold text-black">
       <tr>
-        <th></th> 
         <th>Name</th> 
-        <th>Item Name</th>
-        <th>StockStatus</th> 
-        <th> Price</th> 
-        <th>Details</th> 
+        <th>Item Name</th> 
+        <th>StockStatus</th>
+        <th>Price</th> 
+        <th> Details</th> 
+        <th></th> 
        
       </tr>
     </thead> 

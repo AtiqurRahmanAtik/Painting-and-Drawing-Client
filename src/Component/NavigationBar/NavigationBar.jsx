@@ -18,19 +18,19 @@ const NavigationBar = () => {
 
     const Links = <>
     
-    <NavLink to='/'> <li><a className="text-2xl font-normal"> Home</a></li> </NavLink> 
+    <NavLink to='/'> <li><a className=" font-normal"> Home</a></li> </NavLink> 
     
-   <NavLink to='/allArtCraft'> <li><a className="text-2xl font-normal">All Art & craft Items</a></li> </NavLink> 
+   <NavLink to='/allArtCraft'> <li><a className=" font-normal">All Art & craft Items</a></li> </NavLink> 
 
    {
-      user &&   <NavLink to='/addcraft'> <li><a className="text-2xl font-normal"> AddCraft</a></li> </NavLink> 
+      user &&   <NavLink to='/addcraft'> <li><a className=" font-normal"> AddCraft</a></li> </NavLink> 
 
    }
 
 
    {
      user && 
-     <NavLink to='/myArtCraft/'> <li><a className="text-2xl font-normal"> MyArt&CraftList</a></li> </NavLink> 
+     <NavLink to='/myArtCraft/'> <li><a className=" font-normal"> MyArt&CraftList</a></li> </NavLink> 
    }
 
 
@@ -82,13 +82,13 @@ const NavigationBar = () => {
          <img className="w-11 rounded-full" src={user?.photoURL || {photo}} alt="" />
 </div>
 
-         <button onClick={handleSingOut} className="btn">Sing Out</button>
+         <button onClick={handleSingOut} className="btn bg-blue-500">Sing Out</button>
 
          
       </div> :
 
       <Link to='/login'>
-      <button  className="btn">Login</button>
+      <button  className="btn bg-blue-500">Login</button>
       </Link>
      
       
