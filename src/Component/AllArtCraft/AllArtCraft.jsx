@@ -10,8 +10,7 @@ const AllArtCraft = () => {
         <div className="my-11">
             <h1 className="text-3xl font-bold text-center">AllArtCraft</h1>
             
-            <h1 className="text-3xl font-bold text-center">AllArtCraft</h1>
-            
+           
 
 
             <div className="overflow-x-auto">
